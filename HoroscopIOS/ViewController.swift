@@ -38,6 +38,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        
+            
+        let detailViewController = segue.destination as! DetailViewController
+        
+        let indice = RecyclerView.indexPathForSelectedRow!
+        
+        detailViewController.horoscope = horoscopeList[indice.row]
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

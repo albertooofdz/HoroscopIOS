@@ -31,3 +31,13 @@ struct Horoscope {
         return list
     }
 }
+
+struct HoroscopeResponse: Decodable{
+    let data: HoroscopeApi
+}
+struct HoroscopeApi: Decodable{
+    let horoscope_data: String
+}
+
+
+    
